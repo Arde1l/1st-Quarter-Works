@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: rgb(0, 50, 100);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+        }
+        .site-logo {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+        }
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .nav-right a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: rgb(0, 80, 150);
+            text-align: center;
+            padding: 350px 20px 350px 20px;
+        }
+
+        .center-logo {
+            width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid white;
+            object-fit: contain;
+        }
+
+        .hero h1 {
+            font-family: Brush Script MT, Lucida Handwriting, cursive;
+            font-size: 48px;
+            font-weight: Normal;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero .highlight {
+            font-family: Brush Script MT, Lucida Handwriting, cursive;
+            color: #ff9696;
+        }
+
+        .subtitle {
+            font-family: Brush Script MT, Lucida Handwriting, cursive;
+            font-size: 26px;
+            color: white;
+            font-style: italic;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgb(0, 80, 150);
+        }
+
+        .about-btn {
+            background: linear-gradient(to right, #00cfeb, #0040a0);
+            color: white;
+            border: none;
+            padding: 15px 350px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+        .works-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgb(0, 80, 150);
+        }
+        .works-btn {
+            background: linear-gradient(to right, #00cfeb, #0040a0);
+            color: white;
+            border: none;
+            padding: 15px 350px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .works-text {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px 60px 20px;
+            background-color: rgb(0, 80, 150);
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-btn {
+            background: linear-gradient(to right, #00cfeb, #0040a0);
+            color: white;
+            border: none;
+            padding: 15px 150px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: -45px;
+            margin-bottom: 30px;
+        }
+
+        .form-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+            font-size: 13px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(to right, #00cfeb, #0040a0);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+        border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .work-content-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px; 
+        }
+
+        .work-preview {
+            width: 55%;   
+            border: 2px dashed #000000;
+            padding: 8px;
+            background: #ffffff;
+        }
+
+        .work-preview img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .works-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .work-details {
+            width: 45%;
+        }
+
+        .work-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .work-details li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="Logo.png" alt="Logo" class="site-logo">
+        </div>
+        <nav class="nav-right">
+            <a href="#about">About Us</a>
+            <a href="#works">Our Works</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Logo.png" alt="Profile Logo" class="center-logo">
+            <h1>Hello, We're <span class="highlight">River Cruz</span><span class="highlight"> and</span> <span class="highlight">Ardell Santos</span></h1>
+            <p class="subtitle">Students who want to get a high grade in ICT</p>
+        </div>
+    </section>
+    <section class="about-section" id="about">
+        <button class="about-btn">About Us</button>
+        <p class="about-text">
+            Hi!, We are River and Ardell. We are pasionate students who enjoy learning about technology and life skills.        </p>
+    </section>
+    
+    <section class="works-section" id="works">
+        <button class="works-btn">Our Works</button>
+
+        <div class="works-container">
+            <div class="work-card">
+                <div class="work-content-flex">
+                    <div class="work-preview">
+                        <img src="River 1.png" alt="Favorite Spotify Artist">
+                    </div>
+                    <div class="work-details">
+                        <ul>
+                            <li>✓ HTML & CSS Projects</li>
+                            <li>✓ Spotify Artist</li>
+                            <li>✓ List, Links and Images</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-caption">My Favorite Spotify Artist</div> <style> 
+                    .work-caption {
+                        font-size: 16px;
+                        color: #ffffff;
+                        margin-top: 10px;
+                    }
+                </style>
+                <div class="work-content-flex">
+                    <div class="work-preview">
+                        <img src="Ardell 2.png" alt="Favorite Spotify Artist">
+                    </div>
+                    <div class="work-details">
+                        <ul>
+                            <li>✓ HTML & CSS Projects</li>
+                            <li>✓ Spotify Artist</li>
+                            <li>✓ List, Links and Images</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-caption">My Favorite Spotify Artist</div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-content-flex">
+                    <div class="work-preview">
+                        <img src="River 2.png" alt="Movie Form Preview">
+                    </div>
+                    <div class="work-details">
+                        <ul>
+                            <li>✓ HTML & CSS Projects</li>
+                            <li>✓ HTML Forms</li>
+                            <li>✓ Movie Recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-caption">My Rate a Movie Form</div>
+                <div class="work-content-flex">
+                    <div class="work-preview">
+                        <img src="Ardell 1.png" alt="Movie Form Preview">
+                    </div>
+                    <div class="work-details">
+                        <ul>
+                            <li>✓ HTML & CSS Projects</li>
+                            <li>✓ HTML Forms</li>
+                            <li>✓ Movie Recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-caption">My Rate a Movie Form</div>
+            </div>
+        </div>
+    </section>
+
+<section class="contact-section" id="contact">
+        <button class="contact-btn">Contact Us</button>
+        <div class="form-card">
+            <form>
+                <div class="form-group">
+                    <label>Your Name:</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Your Email:</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group radio-group">
+                    <label>How did you find Us?</label>
+                    <input type="radio" name="find" id="fb"> <label for="fb" style="display:inline;">Facebook</label>
+                    <input type="radio" name="find" id="google"> <label for="google" style="display:inline;">Google</label>
+                    <input type="radio" name="find" id="friends"> <label for="friends" style="display:inline;">Friends</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>Interested In:</label>
+                    <input type="checkbox" id="web"> <label for="web" style="display:inline;">Web Design</label>
+                    <input type="checkbox" id="graphic"> <label for="graphic" style="display:inline;">Graphic Design</label>
+                    <input type="checkbox" id="robotics"> <label for="robotics" style="display:inline;">Robotics</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Rate Our Portfolio</label>
+                    <select>
+                        <option disabled selected>-- Select Rating --</option>
+                        <option>5 - ⭐⭐⭐⭐⭐</option>
+                        <option>4 - ⭐⭐⭐⭐</option>
+                        <option>3 - ⭐⭐⭐</option>
+                        <option>2 - ⭐⭐</option>
+                        <option>1 - ⭐</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Any Feedback?</label>
+                    <textarea rows="4" placeholder="Type Here"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Drill 2</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Gill 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            margin: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rate a Movie</h1>
+    <h2>Write a review of a movie that you have watched.</h2>
+    <img src="Image.jpg" width="100" height="100" alt="Image"> 
+    <h2>Movie Information</h2>
+    <form>
+        <label for="title"> Title of the Movie:</label>
+        <input type="text" name="title" id="title" placeholder="write title here">
+        <br>
+        <h3>Genre of the Movie:</h3>
+        <input type="checkbox" id="genre" value="Action">
+        <label for="genre">Action</label>
+        <br>
+        <input type="checkbox" id="genre" value="Comedy">
+        <label for="genre">Comedy</label>
+        <br>
+        <input type="checkbox" id="genre" value="Drama">
+        <label for="genre">Drama</label>
+        <br>
+        <input type="checkbox" id="genre" value="Horror">
+        <label for="genre">Horror</label>
+        <br>
+        <input type="checkbox" id="genre" value="Romance">
+        <label for="genre">Romance</label>
+        <br>
+        <h3>Rating:</h3>
+        <input type="radio" id="1rating" name="rating" value="1rating">
+        <label for="rating">⭐</label>
+        <br>
+        <input type="radio" id="2rating" name="rating" value="2rating">
+        <label for="rating">⭐⭐</label>
+        <br>
+        <input type="radio" id="3rating" name="rating" value="3rating">
+        <label for="rating">⭐⭐⭐</label>
+        <br>
+        <input type="radio" id="4rating" name="rating" value="4rating">
+        <label for="rating">⭐⭐⭐⭐</label>
+        <br>
+        <input type="radio" id="5rating" name="rating" value="5rating">
+        <label for="rating">⭐⭐⭐⭐⭐</label>
+        <br>
+        <h3>Share your thoughts!</h3>
+        <label for="thoughts">Write your thoughts:</label>
+        <br>
+        <textarea id="thoughts" name="thoughts" rows="4" cols="50" placeholder="Type Here"></textarea>
+        <br>
+        <input type="button" value="Submit" name="submit">
+    </form>
+</body>
+</html>

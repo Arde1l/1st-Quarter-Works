@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Seatwork 1</title>
+    <style>
+body {
+      margin: 0;
+      font-family: Gill Sans, sans-serif;
+      background: maroon;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 30px 0;
+    }
+
+    .page {
+      width: 900px;
+    }
+
+    .header {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .profile {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .profile img {
+        width: 180px;
+        height: 180px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .name {
+        margin-top: 15px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        font-style: italic;
+    }
+    .page {
+        width: 900px;
+    }
+    .bio {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 18px;
+      padding: 18px;
+      font-size: 18px;
+      gap: 25px;
+      flex-wrap: wrap;
+      list-style: decimal;
+      padding-left: 25px;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .albums {
+      display: flex;
+      gap: 25px;
+      list-style: decimal;
+      margin-top: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 25px;
+      margin: 0;
+    }
+    .album { 
+        text-align: center;
+        color: white;
+        width: 130px;
+    }
+    .album img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        margin:0 auto 8px;
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">My Top Spotify Artist</div>
+
+        <div class="profile">
+            <img src="Maroon 5.jpg" alt="Maroon 5">
+            <div class ="name">Maroon 5</div>
+        </div>
+
+        <div class="bio">
+            Maroon 5 is an American pop-rock band fronted by lead vocalist Adam Levine. Known for their catchy hooks and chart-topping hits like "Sugar," "Moves Like Jagger," and "She Will Be Loved," Maroon 5 has become one of the most successful Bands out there.
+        </div>
+        <br>
+        <ol class="albums">
+            <li class="album">
+                <img src="Songs About Jane.jpg" alt="Songs About Jane">
+                <span>Songs About Jane</span>
+            </li>
+            <br>
+            <li class="album">
+                <img src="Hands All Over.jpg" alt="Hands All Over">
+                <span>Hands All Over</span>
+            </li>
+            <br>
+            <li class="album">
+                <img src="V.jpg" alt="V">
+                <span>V</span>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
